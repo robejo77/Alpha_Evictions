@@ -1,0 +1,43 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<h2 class="sub-header">Section title</h2>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Contact</th>
+      <th>Plantiff</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zip</th>
+      <th>H s v</th>
+      <th>Scheduled</th>
+      <th>Ejected</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @evic.each do |eviction| %>
+      <tr>
+        <% @prop.each do |property| %>
+        <td>
+          <%= property.contact %>
+        </td>
+        <% end %>
+        
+        <td><%= eviction.plantiff %></td>
+        <td><%= eviction.address %></td>
+        <td><%= eviction.city %></td>
+        <td><%= eviction.zip %></td>
+        <td><%= eviction.h_s_v %></td>
+        <td><%= eviction.scheduled %></td>
+        <td><%= eviction.ejected %></td>
+        <td><%= link_to 'Show', eviction %></td>
+        <td><%= link_to 'Edit', edit_eviction_path(eviction) %></td>
+        <td><%= link_to 'Destroy', eviction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>

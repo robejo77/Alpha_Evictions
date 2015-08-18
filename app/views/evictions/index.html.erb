@@ -1,0 +1,75 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+<h1>Evictions</h1>
+<div class="bs-example">
+    <!-- Button HTML (to Trigger Modal) -->
+    <a href="#newevic" class="btn btn-lg btn-primary" data-toggle="modal">New Eviction</a>
+    
+    <!-- Modal HTML -->
+    <div id="newevic" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you want to save changes you made to document before closing?</p>
+                    <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+
+                   <%= render 'form' %>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>     
+
+
+<h2 class="sub-header">Section title</h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Plantiff</th>
+      <th>Defendant</th>
+      <th>Case</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Phone</th>
+      <th>H s v</th>
+      <th>Scheduled</th>
+      <th>Ejected</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <% @evictions.each do |eviction| %>
+        <td><%= @cust %></td>
+        <td><%= eviction.plantiff %></td>
+        <td><%= eviction.defendant %></td>
+        <td><%= eviction.case %></td>
+        <td><%= eviction.address %></td>
+        <td><%= eviction.city %></td>
+        <td><%= eviction.state %></td>
+        <td><%= eviction.zip %></td>
+        <td><%= eviction.phone %></td>
+        <td><%= eviction.h_s_v %></td>
+        <td><%= eviction.scheduled %></td>
+        <td><%= eviction.ejected %></td>
+        <td><%= link_to 'Show', eviction %></td>
+        <td><%= link_to 'Edit', edit_eviction_path(eviction) %></td>
+        <td><%= link_to 'Destroy', eviction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+<%= link_to 'New Eviction', new_eviction_path %>

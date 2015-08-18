@@ -1,0 +1,66 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<%= form_for(@eviction) do |f| %>
+  <% if @eviction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eviction.errors.count, "error") %> prohibited this eviction from being saved:</h2>
+
+      <ul>
+      <% @eviction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.collection_select(:id, @cust.all,:id, :company) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :plantiff %><br>
+    <%= f.text_field :plantiff %>
+  </div>
+  <div class="field">
+    <%= f.label :defendant %><br>
+    <%= f.text_field :defendant %>
+  </div>
+  <div class="field">
+    <%= f.label :case %><br>
+    <%= f.text_field :case %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :h_s_v %><br>
+    <%= f.text_field :h_s_v %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduled %><br>
+    <%= f.datetime_select :scheduled %>
+  </div>
+  <div class="field">
+    <%= f.label :ejected %><br>
+    <%= f.datetime_select :ejected %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

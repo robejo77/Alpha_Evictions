@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plantiff: MyString
+  defendant: MyString
+  case: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  h_s_v: MyString
+  scheduled: 2015-08-12 15:38:20
+  ejected: 2015-08-12 15:38:20
+
+two:
+  plantiff: MyString
+  defendant: MyString
+  case: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  h_s_v: MyString
+  scheduled: 2015-08-12 15:38:20
+  ejected: 2015-08-12 15:38:20

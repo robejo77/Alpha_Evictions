@@ -1,0 +1,28 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @property.name %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @property.contact %>
+</p>
+
+<p>
+  <strong>Office:</strong>
+  <%= @property.office %>
+</p>
+
+<p>
+  <strong>Direct:</strong>
+  <%= @property.direct %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>
+
+</div>
