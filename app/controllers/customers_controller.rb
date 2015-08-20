@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
- layout "application", except: [:index,] 
+ layout "modal", except: [:index] 
 
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
 

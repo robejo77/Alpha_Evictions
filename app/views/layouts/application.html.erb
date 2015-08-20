@@ -48,22 +48,23 @@
       </div>
     </nav>
 
-    <div class="container-fluid">
+ <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           
           <ul class="nav nav-sidebar">
             <p><%= image_tag "Banner_small.jpg", alt: "logo", class: "logo", width: "255px"  %></p>
             <li class="active"><a href="dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+            
             <li><a href="#">Reports</a></li>
             <li><a href="#">Analytics</a></li>
             <li><a href="#">Export</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="customers">Customer</a></li>
-            <li><a href="properties">Property</a></li>
-            <li><a href="evictions">Eviction</a></li>
-            <li><a href="list">Eviction List</a></li>
+            <li><%= link_to 'Customers', customers_path %></li>
+            <li><%= link_to 'Properties', properties_path %></li>
+            <li><%= link_to 'Evictions', evictions_path %></li>
+            <li><%= link_to 'Eviction List', list_path %></li>
             <li><a href="">Invoice</a></li>
           </ul>
           <ul class="nav nav-sidebar">
@@ -72,7 +73,9 @@
             <li><a href="">Another nav item</a></li>
           </ul>
         </div>
+        <div class="col-sm-9 col-md-10 col-sm-offeset-3 col-md-offset-2">
         <%= yield %>
+        </div>
       </div>
     </div>
   </body>

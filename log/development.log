@@ -42508,3 +42508,1763 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-18 15:17:56
 
 
 Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-18 15:17:56 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-19 21:11:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlphaController#index as HTML
+  Rendered alpha/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1166ms (Views: 1154.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+Processing by AlphaController#index as HTML
+  Rendered alpha/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 104ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-19 21:11:33 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-19 21:11:33 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-19 21:11:46 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (25.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 149ms (Views: 141.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-19 21:11:49 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 111ms (Views: 108.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-19 21:11:49 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-19 21:11:49 -0400
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-19 21:11:52 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCustomer Load (1.0ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered customers/_form.html.erb (6.0ms)
+  Rendered customers/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 111ms (Views: 109.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-19 21:11:54 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-19 21:11:54 -0400
+
+
+Started GET "/properties" for 127.0.0.1 at 2015-08-19 21:12:02 -0400
+Processing by PropertiesController#index as HTML
+  Rendered properties/_form.html.erb (5.0ms)
+  [1m[36mProperty Load (0.0ms)[0m  [1mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 115ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/properties/1" for 127.0.0.1 at 2015-08-19 21:12:06 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProperty Load (0.0ms)[0m  SELECT  "properties".* FROM "properties"  WHERE "properties"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered properties/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 104ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/properties/1/edit" for 127.0.0.1 at 2015-08-19 21:12:09 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.0ms)[0m  [1mSELECT  "properties".* FROM "properties"  WHERE "properties"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered properties/_form.html.erb (3.0ms)
+  Rendered properties/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 108ms (Views: 106.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-19 21:12:35 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (7.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 117ms (Views: 116.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-19 21:12:43 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (6.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.0ms)
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-19 21:12:45 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/edit.html.erb (6.9ms)
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 119ms (Views: 118.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-19 21:12:54 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/_form.html.erb (5.1ms)
+  Rendered customers/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 109ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/5" for 127.0.0.1 at 2015-08-19 21:12:57 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered customers/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 107ms (Views: 106.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-19 21:12:57 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-19 21:12:57 -0400
+
+
+Started GET "/properties/1" for 127.0.0.1 at 2015-08-20 12:58:00 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (1.0ms)[0m  [1mSELECT  "properties".* FROM "properties"  WHERE "properties"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered properties/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 229ms (Views: 206.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/properties/1/edit" for 127.0.0.1 at 2015-08-20 12:58:28 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProperty Load (0.0ms)[0m  SELECT  "properties".* FROM "properties"  WHERE "properties"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered properties/_form.html.erb (3.0ms)
+  Rendered properties/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 115ms (Views: 113.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 12:58:32 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.9ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.4ms)
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 120ms (Views: 119.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 12:58:34 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 109ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 12:58:34 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 12:58:34 -0400
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-20 12:58:38 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 108ms (Views: 106.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 12:58:39 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 12:58:39 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlphaController#index as HTML
+  Rendered alpha/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 216ms (Views: 206.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:37:03 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:37:03 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:37:09 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (24.9ms)
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/edit.html.erb (7.5ms)
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 152ms (Views: 145.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 17:37:13 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 112ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:37:13 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:37:13 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:40:22 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (15.5ms)
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/edit.html.erb (7.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 144ms (Views: 137.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:40:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:22 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:40:23 -0400
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 17:40:28 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 110ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:40:28 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:40:28 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:43:11 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/_form.html.erb (6.0ms)
+  Rendered customers/edit.html.erb (7.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (17.5ms)
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"  WHERE "customers"."id" IS NULL[0m
+Completed 500 Internal Server Error in 139ms
+
+ActionView::Template::Error (undefined local variable or method `notes_path' for #<#<Class:0x4db1b68>:0x4142340>):
+    56:             <p><%= image_tag "Banner_small.jpg", alt: "logo", class: "logo", width: "255px"  %></p>
+    57:             <li class="active"><a href="dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+    58:             <li>
+    59:             <%= link_to notes_path do %>
+    60:               <span class="glyphicon glyphicon-record"></span> All Notes
+    61:             <% end %>
+    62:           </li>
+  app/views/layouts/application.html.erb:59:in `_app_views_layouts_application_html_erb___28895770_34196088'
+
+
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:43:59 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (6.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (16.0ms)
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"  WHERE "customers"."id" IS NULL[0m
+Completed 500 Internal Server Error in 133ms
+
+ActionView::Template::Error (undefined local variable or method `notes_path' for #<#<Class:0x4db1b68>:0x61fa580>):
+    56:             <p><%= image_tag "Banner_small.jpg", alt: "logo", class: "logo", width: "255px"  %></p>
+    57:             <li class="active"><a href="dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+    58:             <li>
+    59:             <!--<%= link_to notes_path do %>-->
+    60:               <span class="glyphicon glyphicon-record"></span> All Notes
+    61:             <% end %>
+    62:           </li>
+  app/views/layouts/application.html.erb:59:in `_app_views_layouts_application_html_erb___28895770_51354420'
+
+
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:44:27 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (6.0ms)
+  Rendered customers/_form.html.erb (6.0ms)
+  Rendered customers/edit.html.erb (7.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 25ms
+
+SyntaxError (F:/TTS/Rails/Alpha_Evictions/app/views/layouts/application.html.erb:87: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/layouts/application.html.erb:87: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:45:25 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/edit.html.erb (7.0ms)
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (18.0ms)
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT "customers".* FROM "customers"  WHERE "customers"."id" IS NULL
+Completed 500 Internal Server Error in 133ms
+
+ActionView::Template::Error (undefined local variable or method `notes_pathdo' for #<#<Class:0x4db1b68>:0x672fc30>):
+    56:             <p><%= image_tag "Banner_small.jpg", alt: "logo", class: "logo", width: "255px"  %></p>
+    57:             <li class="active"><a href="dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+    58:             <li>
+    59:             <!--<%= link_to notes_pathdo %>
+    60:               <span class="glyphicon glyphicon-record"></span> All Notes
+    61:             <%en%>-->
+    62:           </li>
+  app/views/layouts/application.html.erb:59:in `_app_views_layouts_application_html_erb___28895770_54091992'
+
+
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered F:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.5ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.5ms)
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 128ms (Views: 126.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:08 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:46:09 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 124ms (Views: 122.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:48:22 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.5ms)
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 125ms (Views: 123.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:49:39 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:51:16 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:51:16 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (8.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 131ms (Views: 129.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:52:10 -0400
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 17:52:18 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 113ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:52:19 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:52:19 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:53:05 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/edit.html.erb (7.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 122ms (Views: 121.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:53:06 -0400
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 17:53:07 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 111ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:53:07 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:53:07 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:56:20 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (9.5ms)
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/edit.html.erb (6.5ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 150ms (Views: 145.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:56:21 -0400
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 17:56:23 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/modal (1.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:56:34 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:56:34 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/edit.html.erb (7.0ms)
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 131ms (Views: 129.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:57:35 -0400
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 17:57:36 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/modal (0.5ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (9.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 125ms (Views: 124.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:59:32 -0400
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.0ms)
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 121ms (Views: 120.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:38 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 17:59:39 -0400
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 17:59:40 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/modal (1.0ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-20 18:01:48 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/_form.html.erb (6.0ms)
+  Rendered customers/edit.html.erb within layouts/modal (8.0ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-20 18:01:48 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb within layouts/modal (7.0ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/5" for 127.0.0.1 at 2015-08-20 18:01:53 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered customers/show.html.erb within layouts/modal (0.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-20 18:01:54 -0400
+Processing by AlphaController#index as HTML
+  Rendered alpha/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 112ms (Views: 111.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 18:02:32 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 121ms (Views: 120.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 18:02:33 -0400
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 18:02:34 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/modal (0.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-20 18:03:43 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered customers/_form.html.erb (6.0ms)
+  Rendered customers/edit.html.erb within layouts/modal (7.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-20 18:03:43 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/_form.html.erb (5.3ms)
+  Rendered customers/edit.html.erb within layouts/modal (6.5ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 18:03:49 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/modal (1.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 18:03:57 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (7.0ms)
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 122ms (Views: 122.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 18:04:47 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (7.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/properties" for 127.0.0.1 at 2015-08-20 18:04:49 -0400
+Processing by PropertiesController#index as HTML
+  Rendered properties/_form.html.erb (5.0ms)
+  [1m[36mProperty Load (0.0ms)[0m  [1mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 113ms (Views: 110.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/properties/1" for 127.0.0.1 at 2015-08-20 18:04:54 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties"  WHERE "properties"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered properties/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 106ms (Views: 103.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/properties/1/edit" for 127.0.0.1 at 2015-08-20 18:04:56 -0400
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.0ms)[0m  [1mSELECT  "properties".* FROM "properties"  WHERE "properties"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered properties/_form.html.erb (2.0ms)
+  Rendered properties/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 111ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/properties" for 127.0.0.1 at 2015-08-20 18:11:29 -0400
+Processing by PropertiesController#index as HTML
+  Rendered properties/_form.html.erb (3.0ms)
+  [1m[35mProperty Load (0.0ms)[0m  SELECT "properties".* FROM "properties"
+  Rendered properties/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 115ms (Views: 114.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-20 18:11:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:29 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:29 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:29 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:29 -0400
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2015-08-20 18:11:29 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/alpha.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/evictions.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/assets/Banner_small.jpg" for 127.0.0.1 at 2015-08-20 18:11:30 -0400
+
+
+Started GET "/properties" for 127.0.0.1 at 2015-08-20 18:11:32 -0400
+Processing by PropertiesController#index as HTML
+  Rendered properties/_form.html.erb (2.0ms)
+  [1m[36mProperty Load (0.0ms)[0m  [1mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 115ms (Views: 114.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/evictions" for 127.0.0.1 at 2015-08-20 18:11:33 -0400
+Processing by EvictionsController#index as HTML
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered evictions/_form.html.erb (20.0ms)
+  [1m[36mEviction Load (0.0ms)[0m  [1mSELECT "evictions".* FROM "evictions"[0m
+  Rendered evictions/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 134ms (Views: 127.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/list" for 127.0.0.1 at 2015-08-20 18:11:35 -0400
+Processing by AlphaController#evictionlist as HTML
+  [1m[35mEviction Load (0.0ms)[0m  SELECT "evictions".* FROM "evictions"
+  [1m[36mProperty Load (0.0ms)[0m  [1mSELECT "properties".* FROM "properties"[0m
+  Rendered alpha/evictionlist.erb within layouts/application (5.0ms)
+Completed 200 OK in 106ms (Views: 106.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/list" for 127.0.0.1 at 2015-08-20 18:11:37 -0400
+Processing by AlphaController#evictionlist as HTML
+  [1m[35mEviction Load (1.0ms)[0m  SELECT "evictions".* FROM "evictions"
+  [1m[36mProperty Load (1.0ms)[0m  [1mSELECT "properties".* FROM "properties"[0m
+  Rendered alpha/evictionlist.erb within layouts/application (3.0ms)
+Completed 200 OK in 104ms (Views: 102.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 18:11:39 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/_form.html.erb (5.1ms)
+  Rendered customers/edit.html.erb (6.1ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 120ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 18:12:18 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/modal (0.5ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 18:12:21 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (6.1ms)
+  Rendered customers/_form.html.erb (7.5ms)
+  Rendered customers/edit.html.erb (9.0ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 145ms (Views: 144.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2015-08-20 18:12:22 -0400
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/show.html.erb within layouts/modal (1.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-20 18:12:25 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb within layouts/modal (7.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-20 18:12:25 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/edit.html.erb within layouts/modal (7.0ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/properties" for 127.0.0.1 at 2015-08-20 18:13:01 -0400
+Processing by PropertiesController#index as HTML
+  Rendered properties/_form.html.erb (2.0ms)
+  [1m[35mProperty Load (0.0ms)[0m  SELECT "properties".* FROM "properties"
+  Rendered properties/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 109ms (Views: 107.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/properties/1" for 127.0.0.1 at 2015-08-20 18:13:04 -0400
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.0ms)[0m  [1mSELECT  "properties".* FROM "properties"  WHERE "properties"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered properties/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 108ms (Views: 106.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2015-08-20 18:13:06 -0400
+Processing by CustomersController#index as HTML
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb (6.5ms)
+  [1m[35mCustomer Load (0.0ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customers/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 121ms (Views: 120.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-20 18:13:07 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered customers/_form.html.erb (5.0ms)
+  Rendered customers/edit.html.erb within layouts/modal (7.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2015-08-20 18:13:07 -0400
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT  "customers".* FROM "customers"  WHERE "customers"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered customers/_form.html.erb (5.5ms)
+  Rendered customers/edit.html.erb within layouts/modal (7.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.5ms)
