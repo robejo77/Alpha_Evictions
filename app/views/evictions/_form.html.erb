@@ -10,8 +10,11 @@
       </ul>
     </div>
   <% end %>
+
   <div class="field">
+    <%= f.label :company %><br>
     <%= f.collection_select(:id, @cust.all,:id, :company) %>
+    <%= f.text_field :customer_id %>
   </div>
   
   <div class="field">

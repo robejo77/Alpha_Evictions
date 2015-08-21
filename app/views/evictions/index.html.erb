@@ -48,7 +48,7 @@
   <tbody>
       <tr>
         <% @evictions.each do |eviction| %>
-        <td><%= @cust %></td>
+        <td><%= eviction.customer_id %></td>
         <td><%= eviction.plantiff %></td>
         <td><%= eviction.defendant %></td>
         <td><%= eviction.case %></td>
@@ -69,4 +69,4 @@
 </table>
 </div>
 
-<%= link_to 'New Eviction', new_eviction_path %>
+

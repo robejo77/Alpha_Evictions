@@ -18,12 +18,7 @@
   <tbody>
     <% @evic.each do |eviction| %>
       <tr>
-        <% @prop.each do |property| %>
-        <td>
-          <%= property.contact %>
-        </td>
-        <% end %>
-        
+        <td><%= eviction.customer_id %></td>
         <td><%= eviction.plantiff %></td>
         <td><%= eviction.address %></td>
         <td><%= eviction.city %></td>
