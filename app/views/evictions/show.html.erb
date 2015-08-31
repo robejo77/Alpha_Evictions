@@ -1,63 +1,42 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Company:</strong>
-  <%= Customer.first  %>
-</p>
+<div id="notice" class="alert alert-dismissible alert-success"><%= notice %></div>
 
-<p>
-  <strong>Plantiff:</strong>
-  <%= @eviction.plantiff %>
-</p>
-
-<p>
-  <strong>Defendant:</strong>
-  <%= @eviction.defendant %>
-</p>
-
-<p>
-  <strong>Case:</strong>
-  <%= @eviction.case %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @eviction.address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @eviction.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @eviction.state %>
-</p>
-
-<p>
-  <strong>Zip:</strong>
-  <%= @eviction.zip %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @eviction.phone %>
-</p>
-
-<p>
-  <strong>H s v:</strong>
-  <%= @eviction.h_s_v %>
-</p>
-
-<p>
-  <strong>Scheduled:</strong>
-  <%= @eviction.scheduled %>
-</p>
-
-<p>
-  <strong>Ejected:</strong>
-  <%= @eviction.ejected %>
-</p>
-
-<%= link_to 'Edit', edit_eviction_path(@eviction) %> |
-<%= link_to 'Back', evictions_path %>
+<div class="row" style="margin:7px 0px">
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-md-offset-5">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 panel panel-default  bmd-bg-primary" style="margin-bottom: 0 !important;">
+              <div class="panel-heading bmd-bg-primary bmd-border-primary">
+                <h4 class="panel-title bmd-text-grey-50"><strong><%= @eviction.case %>:</strong><span style="float: right;"><%= @eviction.customer.company %></span></h4>
+              </div>
+              <div class="panel-body">
+                <button id="button" type="button" class="btn btn-default btn-block bmd-ripple bmd-ink-blue-500 bmd-floating" data-toggle="collapse" data-target="#<%= @eviction.id %>">
+                <%= @eviction.defendant %>    <strong>| Vs |</strong>    <%= @eviction.plantiff %>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="<%= @eviction.id %>" class="" style="transition: all 0.5s ease; overflow: hidden;">
+                    <div class="panel panel-default bmd-card  bmd-bg-default bmd-border-default bmd-text-blue-50 bmd-floating">
+                          <div class="panel-body bmd-card-image">
+                              <figcaption class="bmd-card-caption text-left ">
+                                  <ul class="list-group col-md-12 bmd-floating">
+                                    <li class="list-group-item bmd-bg-primary"><h4 class="list-group-item-heading">ADDRESS:</h4><%= @eviction.address %><br>
+                                      <%= @eviction.city %>, <%= @eviction.state %> <%= @eviction.zip %></li>
+                                    <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">PHONE:</h4><%= @eviction.phone %></li>
+                                     <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">H/S/V:</h4><%= @eviction.h_s_v %></li>
+                                    <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">SCHED.:</h4><%= @eviction.scheduled %></li>
+                                    <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">EJECTED:</h4><%= @eviction.ejected %></li>
+                                  </ul>
+                              </figcaption>
+                         </div>
+                        <div class="panel-footer">
+                          <%= link_to 'Edit', edit_eviction_path(@eviction), class: "btn btn-default btn btn-xs bmd-ripple" %> |
+<%= link_to 'Back', evictions_path, class: "btn btn-default btn-xs bmd-ripple" %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 class Customer < ActiveRecord::Base
-	has_many :evictions, inverse_of: :eviction
+	has_many :evictions
+	
 	def company_and_id
-    "#{company} #{id}"
+    "#{company}  #{contact}"
   	end
 end

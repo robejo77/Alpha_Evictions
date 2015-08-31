@@ -1,4 +1,5 @@
 class AlphaController < ApplicationController
+
   def index
   	
   end
@@ -12,5 +13,8 @@ class AlphaController < ApplicationController
   	@cust = cust 	
   	@evic = evic
   	@prop = prop
+  end
+  def maps
+    
   end
 end

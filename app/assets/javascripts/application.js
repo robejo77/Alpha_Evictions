@@ -11,7 +11,15 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+$(function(){
+  $('#demo').on('hide.bs.collapse', function () {
+    $('#button').html('<span class="glyphicon glyphicon-collapse-down"></span> Show');
+  })
+  $('#demo').on('show.bs.collapse', function () {
+    $('#button').html('<span class="glyphicon glyphicon-collapse-up"></span> Hide');
+  })
+})

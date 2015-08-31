@@ -1,4 +1,6 @@
 class Eviction < ActiveRecord::Base
-	belongs_to :customer, inverse_of: :customer
-	has_many :properties
+	belongs_to :customer
+	belongs_to :properties
+
+	
 end

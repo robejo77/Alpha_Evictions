@@ -1,4 +1,5 @@
 class EvictionsController < ApplicationController
+  layout "modal", except: [:index, :show, :evictionlist] 
   before_action :set_eviction, only: [:show, :edit, :update, :destroy]
 
   # GET /evictions
@@ -85,6 +86,6 @@ class EvictionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def eviction_params
-      params.require(:eviction).permit(:plantiff, :defendant, :case, :address, :city, :state, :zip, :phone, :h_s_v, :scheduled, :ejected)
+      params.require(:eviction).permit(:plantiff, :defendant, :case, :address, :city, :state, :zip, :phone, :h_s_v, :scheduled, :ejected, :customer_id, :property_id)
     end
 end

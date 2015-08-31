@@ -1,3 +1,3 @@
 class Property < ActiveRecord::Base
-	belongs_to :eviction
+	has_many :eviction
 end

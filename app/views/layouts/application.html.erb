@@ -10,8 +10,11 @@
     <!-- Bootstrap -->
     <!-- Custom styles for this template -->
     <%= stylesheet_link_tag    'bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'bootstrap-md.min', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'flaticon', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'md-icons', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,73 +22,78 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css"> .list-group{ padding-right: 0 !important;}</style> 
   </head>
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-primary" style="border-radius:0 !important;">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"></a>
+          <a class="navbar-brand bmd-ripple" href="#"> <%= image_tag("logowht.png",  height: '30', alt:"Alpha Evictions")%> </a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse in" id="bs-example-navbar-collapse-1" aria-expanded="true">
           <ul class="nav navbar-nav navbar-right">
-            <% if user_signed_in? %>
-            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to "Sign Up",  new_user_registration_path %></li>
-          <li><%= link_to "Forgot Password",  new_user_password_path %></li>
-          <% end %>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
+              <% if user_signed_in? %>
+                <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "Sign Up",  new_user_registration_path %></li>
+              <li><%= link_to "Forgot Password",  new_user_password_path %></li>
+              <% end %>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+              <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+              </form>
         </div>
       </div>
     </nav>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          
-          <ul class="nav nav-sidebar">
-            <p><%= image_tag "Banner_small.jpg", alt: "logo", class: "logo", width: "255px"  %></p>
-            <li class="active"><a href="dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
-            <li>
-            <%= link_to tweets_path do %>
-              <span class="glyphicon glyphicon-record"></span>All Notes
-            <% end %>
-          </li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
+    <div id="sidebar-small" class="bmd-sidebar-primary bmd-sidebar bmd-sidebar-small bmd-sidebar-collapse bmd-sidebar-left" style="position:absolute;">
+      <ul class="bmd-sidebar-nav list-unstyled">
+        <li class="bmd-sidebar-brand"><h3><a href="#" class="bmd-ripple">MENU</a></h3></li>
+        <li>
+          <%= link_to tweets_path, class: "bmd-ripple" do %>
+          <span class="glyphicon glyphicon-record"></span>All Notes
+          <% end %>
+        </li>
+        <li><a href="/" class="bmd-ripple">Dashboard<i class="bmd-sidebar-small-icon flaticon-android11"></i></a></li>
+        <li>
+          <a href="#" data-target="#submenu-small" data-toggle="collapse" class="bmd-ripple collapsed">Eviction DB<i class="bmd-sidebar-small-icon flaticon-connection21"></i></a>
+          <ul class="list-unstyled collapse" id="submenu-small">
+            <li><%= link_to 'Customers', customers_path, class: "bmd-ripple"  %></li>
+                <li><%= link_to 'Properties', properties_path, class: "bmd-ripple"  %></li>
+                <li><%= link_to 'Evictions', evictions_path, class: "bmd-ripple"  %></li>
+                <li><%= link_to 'Eviction List', list_path, class: "bmd-ripple"  %></li>
           </ul>
-          <ul class="nav nav-sidebar">
-            <li><%= link_to 'Customers', customers_path %></li>
-            <li><%= link_to 'Properties', properties_path %></li>
-            <li><%= link_to 'Evictions', evictions_path %></li>
-            <li><%= link_to 'Eviction List', list_path %></li>
-            <li><a href="">Invoice</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Calendar</a></li>
-            <li><a href="">Maps</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-9 col-md-10 col-sm-offeset-3 col-md-offset-2">
+        </li>
+        <li><a href="#" class="bmd-ripple">Invoice</a></li>
+        <li><a href="#" class="bmd-ripple">Calendar</a></li>
+        <li><%= link_to 'Maps', maps_path, class: "bmd-ripple" %></li>
+        <li><a href="#">Shortcuts<i class="bmd-sidebar-small-icon flaticon-drafts"></i></a></li>
+      </ul>
+    </div>
+    <div class="bmd-page-container">
+      <div class="container">
         <%= yield %>
-        </div>
       </div>
     </div>
+    <!-- inline style for demo purpose -->
+    <a href="#" class="bmd-sidebar-toggle" data-target="#sidebar-small" style="position:absolute;">
+      <i class="flaticon-menu55">+</i>
+      <i class="flaticon-close47">x</i>
+    </a>
+    <%= javascript_include_tag 'bootstrap-md.min', 'data-turbolinks-track' => true %> 
+     <%= javascript_include_tag 'bootstrap-md-morphFab.min', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'bootstrap-md-toaster.min', 'data-turbolinks-track' => true %> 
   </body>
 </html>

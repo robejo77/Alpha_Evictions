@@ -1,14 +1,14 @@
 <h1>Evictions</h1>
 <div class="bs-example">
     <!-- Button HTML (to Trigger Modal) -->
-    <a href="#newevic" class="btn btn-lg btn-primary" data-toggle="modal">New Eviction</a>
+    <a href="#newevic" class="btn bmd-ripple btn-primary" data-toggle="modal">New Eviction</a>
     
     <!-- Modal HTML -->
     <div id="newevic" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button" class="close bmd-morph-close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title">Confirmation</h4>
                 </div>
                 <div class="modal-body">
@@ -22,51 +22,47 @@
         </div>
     </div>
 </div>     
-
-
-<h2 class="sub-header">Section title</h2>
-<div class="table-responsive">
-  <table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Company</th>
-      <th>Plantiff</th>
-      <th>Defendant</th>
-      <th>Case</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th>Phone</th>
-      <th>H s v</th>
-      <th>Scheduled</th>
-      <th>Ejected</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <tr>
-        <% @evictions.each do |eviction| %>
-        <td><%= @Customer  %></td>
-        <td><%= eviction.plantiff %></td>
-        <td><%= eviction.defendant %></td>
-        <td><%= eviction.case %></td>
-        <td><%= eviction.address %></td>
-        <td><%= eviction.city %></td>
-        <td><%= eviction.state %></td>
-        <td><%= eviction.zip %></td>
-        <td><%= eviction.phone %></td>
-        <td><%= eviction.h_s_v %></td>
-        <td><%= eviction.scheduled %></td>
-        <td><%= eviction.ejected %></td>
-        <td><%= link_to 'Show', eviction %></td>
-        <td><%= link_to 'Edit', edit_eviction_path(eviction) %></td>
-        <td><%= link_to 'Destroy', eviction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row" style="margin:7px 0px">
+  <% @evictions.each do |eviction| %>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 panel panel-default  bmd-bg-primary" style="margin-bottom: 0 !important;">
+              <div class="panel-heading bmd-bg-primary bmd-border-primary">
+                <h4 class="panel-title bmd-text-grey-50"><strong><%= eviction.case %>:</strong><span style="float: right;"><%= eviction.customer.company %></span></h4>
+              </div>
+              <div class="panel-body">
+                <button id="button" type="button" class="btn btn-default btn-block bmd-ripple bmd-ink-blue-500 bmd-floating" data-toggle="collapse" data-target="#<%= eviction.id %>">
+                <%= eviction.defendant %>    <strong>| Vs |</strong>    <%= eviction.plantiff %>
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="<%= eviction.id %>" class="collapse" style="transition: all 0.5s ease; overflow: hidden;">
+                    <div class="panel panel-default bmd-card  bmd-bg-default bmd-border-default bmd-text-blue-50 bmd-floating">
+                          <div class="panel-body bmd-card-image">
+                              <figcaption class="bmd-card-caption text-left ">
+                                  <ul class="list-group col-md-12 bmd-floating">
+                                    <li class="list-group-item bmd-bg-primary"><h4 class="list-group-item-heading">ADDRESS:</h4><%= eviction.address %><br>
+                                      <%= eviction.city %>, <%= eviction.state %> <%= eviction.zip %></li>
+                                    <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">PHONE:</h4><%= eviction.phone %></li>
+                                     <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">H/S/V:</h4><%= eviction.h_s_v %></li>
+                                    <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">SCHED.:</h4><%= eviction.scheduled %></li>
+                                    <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">EJECTED:</h4><%= eviction.ejected %></li>
+                                  </ul>
+                              </figcaption>
+                         </div>
+                        <div class="panel-footer">
+                          <%= link_to 'Edit', edit_eviction_path(eviction),data: { toggle: "modal", target: "#newevic" }, class: "btn btn-default btn-xs bmd-ripple" %>
+                          <%= link_to 'Destroy', eviction, class: "btn btn-default btn-xs bmd-ripple", method: :delete, data: { confirm: 'Are you sure?' } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
 </div>
 
 
