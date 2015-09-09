@@ -1,6 +1,23 @@
 class EvictionsController < ApplicationController
-  layout "modal", except: [:index, :show, :evictionlist] 
+  layout "modal", except: [:index, :show, :evictionlist, :evictions_by_customer] 
   before_action :set_eviction, only: [:show, :edit, :update, :destroy]
+  def full_address
+    "#{eviction.address}, #{eviction.zip}"
+  end
+
+  def evictions_by_customer
+    @eviction = Eviction.new
+    
+    @customer = Customer.find(params[:customer_id])
+    @evictions = Eviction.all
+    @evictions_by_cus = []
+
+    @evictions.each do |eviction|
+      if eviction.customer.id == params[:customer_id].to_i
+        @evictions_by_cus.push(eviction)
+      end
+    end
+  end
 
   # GET /evictions
   # GET /evictions.json
@@ -86,6 +103,6 @@ class EvictionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def eviction_params
-      params.require(:eviction).permit(:plantiff, :defendant, :case, :address, :city, :state, :zip, :phone, :h_s_v, :scheduled, :ejected, :customer_id, :property_id)
+      params.require(:eviction).permit(:plantiff, :defendant, :case, :address, :city, :state, :zip, :phone, :h_s_v, :scheduled, :ejected, :customer_id, :property_id, :lattitude, :longitude)
     end
 end

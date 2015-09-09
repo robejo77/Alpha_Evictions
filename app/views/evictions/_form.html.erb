@@ -1,6 +1,8 @@
-<%= form_for(@eviction , html: {class: "form-horizontal"}) do |f|  %>
+<%= form_for(@eviction , html: {class: "form-horizontal row"}) do |f|  %>
   <% if @eviction.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-dismissible alert-danger">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+       <strong>Oh snap!</strong>
       <h2><%= pluralize(@eviction.errors.count, "error") %> prohibited this eviction from being saved:</h2>
 
       <ul>
@@ -11,131 +13,106 @@
     </div>
   <% end %>
 
-<!--div class="form-group">
-            <label for="select" class="col-lg-2 control-label">Selects</label>
-            <div class="col-lg-9">
-              <div role="presentation" class="dropdown bmd-select form-control open">
-                <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="true">
-                  <span class="bmd-selected-value">Selected value</span>
-                  <span class="caret"></span>
-                </a>
-                <%= collection_select(:eviction, :customer_id, Customer.all, :id, :company_and_id, prompt: true, id: "menu1", class: "dropdown-menu", role: "menu", ) %>
-
-                
-                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-                  <% @evic.each do |customer| %>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-value="Action"><%= customer.customer.company %></a></li>
-                  <% end %>  
-                </ul>
-                
-                <span class="bmd-bar"></span>
-              </div>
-            </div>
-          </div-->
-
-  <div class="well well-sm">
-  <div class="bmd-field-group">
-    <%= f.label :Company %><br>
+<div class="well well-sm bmd-bg-primary col-sm-12"> 
+  <div class="bmd-field-group col-sm-4">
+    <%= text_field(:eviction, :case, class: "bmd-input bmd-text-grey-50") %>
+    <span class="bmd-bars"></span>
+    <label class="bmd-label bmd-text-grey-50"><%= f.label :case %></label>
+    <span class="bmd-field-feedback"></span>
+  </div>
+  <div id="cmp" class="bmd-field-group col-sm-8" >
+    <%= f.label :Company, class: "bmd-text-grey-50", style: "float: right;" %><br>
     <span class="bmd-field-feedback"></span>
      <%= collection_select(:eviction, :customer_id, 
   Customer.all, :id, :company_and_id, prompt: true, class: "bmd-input") %>
   </div>
+</div>
+
+<fieldset class="col-sm-12">
+  <div class="well well-sm row">
+    <div class="bmd-field-group col-sm-6">
+      <%= text_field(:eviction, :plantiff, class: "bmd-input") %>
+      <span class="bmd-bar"></span>
+      <label class="bmd-label"><%= f.label :plantiff %></label>
+      <span class="bmd-field-feedback"></span>
+    </div>
+   
+    <div class="bmd-field-group col-sm-6">
+      <%= text_field(:eviction, :defendant, class: "bmd-input") %>
+      <span class="bmd-bar"></span>
+      <label class="bmd-label"><%= f.label :defendant %></label>
+      <span class="bmd-field-feedback"></span>
+    </div>
   </div>
 
-  <fieldset>
- <div class="well well-sm">
-<div class="bmd-field-group">
-    <%= text_field(:eviction, :case, class: "bmd-input") %>
-    <span class="bmd-bar"></span>
-    <label class="bmd-label"><%= f.label :case %></label>
-    <span class="bmd-field-feedback"></span>
-  </div>
-  </div>
-    
-  <div class="well well-sm">
-<div class="bmd-field-group">
-    <%= text_field(:eviction, :plantiff, class: "bmd-input") %>
-    <span class="bmd-bar"></span>
-    <label class="bmd-label"><%= f.label :plantiff %></label>
-    <span class="bmd-field-feedback"></span>
-  </div>
+
+
+  <div class="well well-sm row">
+    <div class="bmd-field-group col-sm-12 info">
+      <%= text_field(:eviction, :address, class: "bmd-input") %>
+      <span class="bmd-bar"></span>
+      <label class="bmd-label"><%= f.label :address %></label>
+      <span class="bmd-field-feedback"></span>
+    </div>
+
+    <div class="bmd-field-group col-sm-6">
+      <%= text_field(:eviction, :city, class: "bmd-input") %>
+      <span class="bmd-bar"></span>
+      <label class="bmd-label"><%= f.label :city %></label>
+      <span class="bmd-field-feedback"></span>
+    </div>
+
+    <div class="bmd-field-group col-sm-2 col-sm-offset-2">
+      <%= text_field(:eviction, :state, class: "bmd-input") %>
+      <span class="bmd-bar"></span>
+      <label class="bmd-label"><%= f.label :state %></label>
+      <span class="bmd-field-feedback"></span>
+    </div>
+
+    <div class="bmd-field-group col-sm-2 ">
+      <%= text_field(:eviction, :zip, class: "bmd-input") %>
+      <span class="bmd-bar"></span>
+      <label class="bmd-label"><%= f.label :zip %></label>
+      <span class="bmd-field-feedback"></span>
+    </div>
+    <div class="form-group has-error col-sm-12">
+    <div class="bmd-field-group col-sm-3">
+      <%= text_field(:eviction, :latitude, disabled:"", class: "bmd-input input-sm bmd-text-grey-400") %>
+      <span class="bmd-bar"></span>
+      <span class="bmd-field-feedback"></span>  
+    </div>
+
+    <div class="bmd-field-group col-sm-3">
+      <%= text_field(:eviction, :longitude, disabled:"", class: "bmd-input input-sm bmd-text-grey-400") %>
+      <span class="bmd-bar "></span>
+      <span class="bmd-field-feedback"></span>
+    </div>
+    </div>
   </div>
 
-  <div class="well well-sm">
-<div class="bmd-field-group">
-    <%= text_field(:eviction, :defendant, class: "bmd-input") %>
-    <span class="bmd-bar"></span>
-    <label class="bmd-label"><%= f.label :defendant %></label>
-    <span class="bmd-field-feedback"></span>
-  </div>
-  </div>
- 
-
-  <div class="well well-sm">
-<div class="bmd-field-group">
-    <%= text_field(:eviction, :address, class: "bmd-input") %>
-    <span class="bmd-bar"></span>
-    <label class="bmd-label"><%= f.label :address %></label>
-    <span class="bmd-field-feedback"></span>
-  </div>
-  </div>
-
-  <div class="well well-sm">
-<div class="bmd-field-group">
-    <%= text_field(:eviction, :city, class: "bmd-input") %>
-    <span class="bmd-bar"></span>
-    <label class="bmd-label"><%= f.label :city %></label>
-    <span class="bmd-field-feedback"></span>
-  </div>
-  </div>
-
-  <div class="well well-sm">
-<div class="bmd-field-group">
-    <%= text_field(:eviction, :state, class: "bmd-input") %>
-    <span class="bmd-bar"></span>
-    <label class="bmd-label"><%= f.label :state %></label>
-    <span class="bmd-field-feedback"></span>
-  </div>
-  </div>
-
-  <div class="well well-sm">
-<div class="bmd-field-group">
-    <%= text_field(:eviction, :zip, class: "bmd-input") %>
-    <span class="bmd-bar"></span>
-    <label class="bmd-label"><%= f.label :zip %></label>
-    <span class="bmd-field-feedback"></span>
-  </div>
-  </div>
-
-  <div class="well well-sm">
-<div class="bmd-field-group">
+  <div class="well well-sm row">
+<div class="bmd-field-group col-sm-4 info">
     <%= text_field(:eviction, :phone, class: "bmd-input") %>
     <span class="bmd-bar"></span>
     <label class="bmd-label"><%= f.label :phone %></label>
     <span class="bmd-field-feedback"></span>
   </div>
-  </div>
-
-  <div class="well well-sm">
-<div class="bmd-field-group">
+  
+<div class="bmd-field-group col-sm-4 col-sm-offset-4 info">
     <%= text_field(:eviction, :h_s_v, class: "bmd-input") %>
     <span class="bmd-bar"></span>
     <label class="bmd-label"><%= f.label :h_s_v %></label>
     <span class="bmd-field-feedback"></span>
   </div>
-  </div>
 
-  <div class="well well-sm">
-<div class="bmd-field-group">
+<div class="bmd-field-group col-sm-6">
     <%= text_field(:eviction, :scheduled, class: "bmd-input") %>
     <span class="bmd-bar"></span>
     <label class="bmd-label"><%= f.label :scheduled %></label>
     <span class="bmd-field-feedback"></span>
   </div>
-  </div>
 
-  <div class="well well-sm">
-<div class="bmd-field-group">
+<div class="bmd-field-group col-sm-6">
     <%= text_field(:eviction, :ejected, class: "bmd-input") %>
     <span class="bmd-bar"></span>
     <label class="bmd-label"><%= f.label :ejected %></label>
@@ -143,9 +120,9 @@
   </div>
   </div>
   
-  <div class="actions well well-lg">
-    <%= submit_tag nil, class: "btn btn-primary bmd-ripple btn-lg btn-block btn-floating" %>
-    <%= link_to 'Back', evictions_path, class: "btn btn-primary bmd-ripple btn-lg btn-block btn-floating" %>
+  <div class="actions info btn-group col-sm-12">
+    <%= submit_tag nil, class: "btn btn-primary bmd-ripple btn-lg btn-floating col-sm-6" %>
+    <%= link_to 'Back', evictions_path, class: "btn btn-primary bmd-ripple btn-lg btn-floating col-sm-6" %>
   </div>
 <% end %>
 </fieldset>

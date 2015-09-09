@@ -1,5 +1,65 @@
+<div class="modals">
+    <!-- Button HTML (to Trigger Modal) -->
+    <a href="#newtweet" class="btn btn-lg btn-primary" data-toggle="modal">New Message</a>
+    
+    <!-- Modal HTML -->
+    <div id="newtweet" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Add New Message</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-warning"><strong>** IF YOU DO NOT SAVE ALL CHANGES WILL BE LOST **</strong></p>
+
+                   <%= render 'form' %>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="edittweet" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Edit Message</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-warning"><strong>** IF YOU DO NOT SAVE ALL CHANGES WILL BE LOST **</strong></p>
+
+                    <%= render template: 'tweets/edit' %>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <h1>Listing tweets</h1>
 
+<% @tweets.each do |tweet| %>
+        <div class="modal">
+  <div class="modal-dialog bmd-modal-dialog">
+    <div class="modal-content bmd-border-primary">
+      <div class="modal-header bmd-bg-primary">
+        <button type="button" class="close btn-link bmd-flat-btn bmd-flat-btn-light" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title bmd-text-blue-100">Message From: <%= tweet.user_id %></h4>
+      </div>
+      <div class="modal-body">
+        <p><%= tweet.message %></p>
+      </div>
+      <div class="modal-footer bmd-border-blue-100">
+        <%= link_to 'Edit', edit_tweet_path(tweet), class: "btn btn-default bmd-ripple bmd-ink-grey-400" %>Close</button>
+        <button type="button" class="btn btn-primary bmd-ripple">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
 <div class="table-responsive">
   <table class="table table-striped table-hover">
     <thead>
@@ -27,3 +87,5 @@
 <br>
 
 <%= link_to 'New Tweet', new_tweet_path %>
+ <%= javascript_include_tag 'bootstrap-md-toaster.min', 'data-turbolinks-track' => true %> 
+     

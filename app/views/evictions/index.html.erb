@@ -1,7 +1,35 @@
 <h1>Evictions</h1>
 <div class="bs-example">
-    <!-- Button HTML (to Trigger Modal) -->
-    <a href="#newevic" class="btn bmd-ripple btn-primary" data-toggle="modal">New Eviction</a>
+<nav class="navbar navbar-primary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed bmd-ripple" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+         <ul class="nav navbar-nav"
+          <!-- Button HTML (to Trigger Modal) -->
+          <li class="active"><a href="#newevic" class="bmd-ripple" data-toggle="modal">New Eviction</a></li>
+          <li>
+            <%= link_to evictions_path, class: "bmd-ripple" do %>All Evictions
+              <% end %>
+          </li>
+            <li class="dropdown bmd-dropdown">
+              <a href="#" class="dropdown-toggle bmd-ripple" data-toggle="dropdown" role="button" aria-expanded="false">Find by Customer<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <% Customer.all.each do |customer| %>
+                  <li><%= link_to customer.company, evictionsby_path(customer_id: customer.id) %></li>
+                  <% end %>
+              </ul>
+            </li>
+          </ul>
+       </div>
+  </div>
+</nav>
+
+
     
     <!-- Modal HTML -->
     <div id="newevic" class="modal fade">
@@ -21,10 +49,27 @@
             </div>
         </div>
     </div>
+    <div id="editevic" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close bmd-morph-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you want to save changes you made to document before closing?</p>
+                    <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+
+                  <%= render template: 'evictions/edit' %>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>     
 <div class="row" style="margin:7px 0px">
   <% @evictions.each do |eviction| %>
-    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 panel panel-default  bmd-bg-primary" style="margin-bottom: 0 !important;">
               <div class="panel-heading bmd-bg-primary bmd-border-primary">
@@ -46,6 +91,7 @@
                                   <ul class="list-group col-md-12 bmd-floating">
                                     <li class="list-group-item bmd-bg-primary"><h4 class="list-group-item-heading">ADDRESS:</h4><%= eviction.address %><br>
                                       <%= eviction.city %>, <%= eviction.state %> <%= eviction.zip %></li>
+                                      <li class="list-group-item bmd-text-success"><%= eviction.latitude %>  ||  <%= eviction.longitude %></li>
                                     <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">PHONE:</h4><%= eviction.phone %></li>
                                      <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">H/S/V:</h4><%= eviction.h_s_v %></li>
                                     <li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">SCHED.:</h4><%= eviction.scheduled %></li>
@@ -54,7 +100,7 @@
                               </figcaption>
                          </div>
                         <div class="panel-footer">
-                          <%= link_to 'Edit', edit_eviction_path(eviction),data: { toggle: "modal", target: "#newevic" }, class: "btn btn-default btn-xs bmd-ripple" %>
+                          <%= link_to 'Edit', edit_eviction_path(eviction),data: { toggle: "modal", target: "#editevic" }, class: "btn btn-default btn-xs bmd-ripple" %>
                           <%= link_to 'Destroy', eviction, class: "btn btn-default btn-xs bmd-ripple", method: :delete, data: { confirm: 'Are you sure?' } %>
                         </div>
                     </div>

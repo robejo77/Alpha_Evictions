@@ -6,14 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Alpha</title>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
     <!-- Bootstrap -->
     <!-- Custom styles for this template -->
     <%= stylesheet_link_tag    'bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag    'bootstrap-md.min', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'flaticon', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'md-icons', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'mystyle', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+    
+       
+<link type="text/css" rel="stylesheet" href="//www.google.com/calendar/static/666131ea26a1254c51ef8f4485057339embedcompiled_fastui.css">
+
+<script type="text/javascript" src="//www.google.com/calendar/static/666131ea26a1254c51ef8f4485057339embedcompiled__en.js"></script>
+
+
+
 
   <%= csrf_meta_tags %>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,7 +35,7 @@
     <style type="text/css"> .list-group{ padding-right: 0 !important;}</style> 
   </head>
 
-  <body>
+  <body >
 
     <nav class="navbar navbar-primary" style="border-radius:0 !important;">
       <div class="container-fluid">
@@ -36,7 +46,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand bmd-ripple" href="#"> <%= image_tag("logowht.png",  height: '30', alt:"Alpha Evictions")%> </a>
+          <a class="navbar-brand bmd-ripple" href="/"> <%= image_tag("logowht.png",  height: '30', alt:"Alpha Evictions")%> </a>
         </div>
         <div class="navbar-collapse collapse in" id="bs-example-navbar-collapse-1" aria-expanded="true">
           <ul class="nav navbar-nav navbar-right">
@@ -61,25 +71,47 @@
     <div id="sidebar-small" class="bmd-sidebar-primary bmd-sidebar bmd-sidebar-small bmd-sidebar-collapse bmd-sidebar-left" style="position:absolute;">
       <ul class="bmd-sidebar-nav list-unstyled">
         <li class="bmd-sidebar-brand"><h3><a href="#" class="bmd-ripple">MENU</a></h3></li>
+        <li><a href="/" class="bmd-ripple">Dashboard<i class="bmd-sidebar-small-icon fa fa-tachometer"></i></a></li>
         <li>
-          <%= link_to tweets_path, class: "bmd-ripple" do %>
-          <span class="glyphicon glyphicon-record"></span>All Notes
+          <%= link_to tweets_path, class: "bmd-ripple" do %>Messages
+          <i class="bmd-sidebar-small-icon fa fa-comment-o"></i>
           <% end %>
         </li>
-        <li><a href="/" class="bmd-ripple">Dashboard<i class="bmd-sidebar-small-icon flaticon-android11"></i></a></li>
+        
         <li>
-          <a href="#" data-target="#submenu-small" data-toggle="collapse" class="bmd-ripple collapsed">Eviction DB<i class="bmd-sidebar-small-icon flaticon-connection21"></i></a>
+          <a href="#" data-target="#submenu-small" data-toggle="collapse" class="bmd-ripple collapsed">Eviction DB<i class="bmd-sidebar-small-icon fa fa-database"></i></a>
           <ul class="list-unstyled collapse" id="submenu-small">
-            <li><%= link_to 'Customers', customers_path, class: "bmd-ripple"  %></li>
-                <li><%= link_to 'Properties', properties_path, class: "bmd-ripple"  %></li>
-                <li><%= link_to 'Evictions', evictions_path, class: "bmd-ripple"  %></li>
-                <li><%= link_to 'Eviction List', list_path, class: "bmd-ripple"  %></li>
+            <li>
+              <%= link_to customers_path, class: "bmd-ripple" do %>Customers
+              <i class="bmd-sidebar-icon fa fa-users"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to properties_path, class: "bmd-ripple" do  %>Property Contact
+              <i class="bmd-sidebar-icon fa fa-phone-square"></i>
+            <% end %>
+            </li>
+            <li>
+              <%= link_to evictions_path, class: "bmd-ripple" do %>Evictions
+              <i class="bmd-sidebar-icon fa fa-home"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to list_path, class: "bmd-ripple" do  %>Eviction List
+              <i class="bmd-sidebar-icon fa fa-list-alt"></i>
+              <% end %>
+            </li>
           </ul>
         </li>
-        <li><a href="#" class="bmd-ripple">Invoice</a></li>
-        <li><a href="#" class="bmd-ripple">Calendar</a></li>
-        <li><%= link_to 'Maps', maps_path, class: "bmd-ripple" %></li>
-        <li><a href="#">Shortcuts<i class="bmd-sidebar-small-icon flaticon-drafts"></i></a></li>
+        <li><a href="#" class="bmd-ripple">Invoice<i class="bmd-sidebar-small-icon fa fa-money"></i></a></li>
+        <li><%= link_to calendar_path, class: "bmd-ripple" do %>Calendar<i class="bmd-sidebar-small-icon fa fa-calendar"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to maps_path, class: "bmd-ripple" do %>Maps
+          <i class="bmd-sidebar-small-icon fa fa-map"></i>
+          <% end %>
+        </li>
       </ul>
     </div>
     <div class="bmd-page-container">
@@ -88,12 +120,13 @@
       </div>
     </div>
     <!-- inline style for demo purpose -->
-    <a href="#" class="bmd-sidebar-toggle" data-target="#sidebar-small" style="position:absolute;">
-      <i class="flaticon-menu55">+</i>
-      <i class="flaticon-close47">x</i>
+    
+    <a href="#" class="bmd-sidebar-toggle icon_white" data-target="#sidebar-small" style="position:absolute;">
+      <i class="flaticon-menu55 bmd-sidebar-small-icon"><span class="bmd-sidebar-small-icon fa fa-plus-square-o"></span></i>
+      <i class="flaticon-close47 bmd-sidebar-small-icon"><span class="bmd-sidebar-small-icon fa fa-times"></i>
     </a>
     <%= javascript_include_tag 'bootstrap-md.min', 'data-turbolinks-track' => true %> 
      <%= javascript_include_tag 'bootstrap-md-morphFab.min', 'data-turbolinks-track' => true %>
-      <%= javascript_include_tag 'bootstrap-md-toaster.min', 'data-turbolinks-track' => true %> 
+     
   </body>
 </html>

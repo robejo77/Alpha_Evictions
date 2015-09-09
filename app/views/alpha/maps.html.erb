@@ -1,15 +1,91 @@
 <div class="row">
-     <div id="map" class="col-md-12"></div>
+     <div id="map" class="bmd-floating"></div>
 </div> 
+
 <script type="text/javascript">
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
+      
+  jQuery(function($) {
+    // Asynchronously Load the map API 
+    var script = document.createElement('script');
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBZr8j8zX9gc1s7v0GfBYQZHEzz95_xAng&sensor=false&callback=initialize";
+    document.body.appendChild(script);
+});
+
+function initialize() {
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+        mapTypeId: 'roadmap'
+    };
+                    
+    // Display a map on the page
+    map = new google.maps.Map(document.getElementById("map"), {
           center: {lat: 33.7677129, lng: -84.4206039},
-          zoom: 10
         });
-      }
+    map.setTilt(45);
+        
+    // Multiple Markers
+    var markers = [
+    <% @evic.each do |eviction| %>
+        ['{#eviction.address}',(<%= eviction.latitude %>),(<%= eviction.longitude %>)],
+        <% end %>
+    ];
+                        
+    // Info Window Content
+    var infoWindowContent = [
+      <% @evic.each do |eviction| %>
+        [
+                
+                                  '<ul class="list-group col-md-12 bmd-floating">'+
+                                    '<li class="list-group-item bmd-bg-primary bmd-text-grey-50"><h4 class="list-group-item-heading">ADDRESS:</h4><%= eviction.address %><br>'+
+                                    '<li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">PHONE:</h4><%= eviction.phone %></li>'+
+                                     '<li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">H/S/V:</h4><%= eviction.h_s_v %></li>'+
+                                    '<li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">SCHED.:</h4><%= eviction.scheduled %></li>'+
+                                    '<li class="list-group-item bmd-text-default"><h4 class="list-group-item-heading">EJECTED:</h4><%= eviction.ejected %></li>'+
+                                  '</ul>'+
+                                   '<%= link_to 'Edit', edit_eviction_path(eviction),data: { toggle: "modal", target: "#editevic" }, class: "btn btn-default btn-xs bmd-ripple" %>'+
+                          '<%= link_to 'Destroy', eviction, class: "btn btn-default btn-xs bmd-ripple", method: :delete, data: { confirm: 'Are you sure?' } %>'
+                              ],
+
+        
+        <% end %>
+    ];
+        
+    // Display multiple markers on a map
+    var infoWindow = new google.maps.InfoWindow(), marker, i;
+    
+    // Loop through our array of markers & place each one on the map  
+    for( i = 0; i < markers.length; i++ ) {
+        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        bounds.extend(position);
+        marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: markers[i][0]
+        });
+        
+        // Allow each marker to have an info window    
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infoWindow.setContent(infoWindowContent[i][0]);
+                infoWindow.open(map, marker);
+            }
+        })(marker, i));
+
+        // Automatically center the map fitting all markers on the screen
+        map.fitBounds(bounds);
+    }
+
+    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        this.setZoom(10);
+        google.maps.event.removeListener(boundsListener);
+    });
+    
+}
     </script>
-    <script async defer
+ 
+
+    <!--script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZr8j8zX9gc1s7v0GfBYQZHEzz95_xAng&callback=initMap">
-    </script>
+    </script-->

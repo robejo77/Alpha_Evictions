@@ -1,6 +1,8 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'devise'
+
+gem 'cancan'
 
 gem 'paperclip'
 
@@ -8,10 +10,28 @@ gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'bootstrap_form'
 
+gem 'font-awesome-sass'
+
+gem 'geocoder'
+
+gem 'gmaps4rails'
+
+gem 'google-api-client'
+
+gem 'omniauth', '~> 1.2.2'
+
+gem 'omniauth-google-oauth2'
+
+gem 'json'
+
+gem 'paypal-sdk-rest'
+
+gem 'activemerchant'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '1.3.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,4 +63,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]

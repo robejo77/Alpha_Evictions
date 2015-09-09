@@ -13,8 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require underscore
+//= require gmaps/google
 //= require bootstrap-sprockets
 //= require_tree .
+
+
 $(function(){
   $('#demo').on('hide.bs.collapse', function () {
     $('#button').html('<span class="glyphicon glyphicon-collapse-down"></span> Show');
@@ -23,3 +27,4 @@ $(function(){
     $('#button').html('<span class="glyphicon glyphicon-collapse-up"></span> Hide');
   })
 })
+

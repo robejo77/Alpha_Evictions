@@ -1,0 +1,12 @@
+<h1>Cart#checkout</h1>
+<p>Order review</p>
+
+<% @order.order_items.each do |key_value| %>
+	<ul>
+		<li><%= Product.find(key).name %> - <%= value %></li>
+	</ul>
+<% end %>
+
+<p> 
+	<strong>Order Total:</strong> <%= number_to_currency @order.grand_total %>
+</p>

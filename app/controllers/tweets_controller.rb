@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+  layout "modal", except: [:index, :show] 
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
 
@@ -6,6 +7,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
+    @tweet = Tweet.new
     respond_with(@tweets)
   end
 
@@ -14,6 +16,7 @@ class TweetsController < ApplicationController
   end
 
   def new
+    @tweets = Tweet.all
     @tweet = Tweet.new
     respond_with(@tweet)
   end

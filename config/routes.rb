@@ -1,7 +1,22 @@
 Rails.application.routes.draw do
+  post 'add_to_cart' => 'cart#add_to_cart'
+
+  get 'view_order' => 'cart#view_order'
+
+  get 'checkout' => 'cart#checkout'
+
+  resources :orders
+
+  resources :line_items
+
+  resources :categories
+
+  resources :products
+
   resources :tweets
 
   devise_for :users
+  
   resources :evictions
 
   resources :properties
@@ -17,6 +32,10 @@ Rails.application.routes.draw do
   get 'users' => 'alpha#users'
 
   get 'maps' => 'alpha#maps'
+
+  get 'calendar' => 'alpha#calendar'
+
+  get 'evictionsby' => 'evictions#evictions_by_customer'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

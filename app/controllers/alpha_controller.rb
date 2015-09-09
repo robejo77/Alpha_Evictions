@@ -1,5 +1,5 @@
 class AlphaController < ApplicationController
-
+layout "modal", except: [:index, :login, :evictionlist, :maps, :calendar] 
   def index
   	
   end
@@ -15,6 +15,13 @@ class AlphaController < ApplicationController
   	@prop = prop
   end
   def maps
+    @cust = cust  
+    @evic = evic
+    @prop = prop
+  end
+
+  def calendar
+    
     
   end
 end
